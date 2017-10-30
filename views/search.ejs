@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Gimme your name!</title>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+</head>
+<body>
+	<div class="container">
+		<h1><%=userName%>, you are <%=onTheList%>on the list!</h1>
+		<% if(onTheList == "not "){%>
+			<p>If you would like to be added to the list, please retype your name:</p>
+			<form action="/nameAdded" method="post">
+				<input type="text" name="nameToBeAdded" placeholder="Your name" />
+				<button type="submit" class="btn btn-primary">Add my name!</button>
+			</form>
+			<% } %>
+	</div>
+
+</body>
+</html>
